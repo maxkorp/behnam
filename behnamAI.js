@@ -1,3 +1,5 @@
+import barg from "barg";
+
 // behnamAI.js
 while (playerOnField) {
   if (barg.alive()) {
