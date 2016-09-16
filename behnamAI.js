@@ -1,14 +1,38 @@
 import barg from "barg";
 
 // behnamAI.js
-while (playerOnField) {
-  if (barg.alive()) {
-    harass(barg);
-    continue;
+
+const BEHNAM_CHARS = ['cloud', 'little_mac'];
+
+class Behnam {
+  constructor(char) {
+    if (char && BEHNAM_CHARS.includes(char)) {
+      this.char = char;
+    } else {
+      const randIndex = Math.floor(Math.random() * BEHNAM_CHARS.length);
+      this.char = BEHNAM_CHARS[randIndex];
+    }
   }
-  behnam.dashAttack();
+
+  harass(player) {
+    while (player.alive()) {
+      this.dashAttack(player);
+    }
+  }
+
+  init() {
+    while (playerOnField) {
+      if (barg.alive()) {
+        this.harass(barg);
+        continue;
+      }
+
+      this.dashAttack();
+    }
+  }
 }
-if(stillAlive) {
- finishHim(powerAmount);
-}
+
+const behnam = new Behnam();
+behnam.init();
+
 // insert the saltiest comment directed at Max below
