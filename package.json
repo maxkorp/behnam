@@ -1,0 +1,16 @@
+{
+  "name": "behnam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "behnamAI.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxkorp/behnam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxkorp/behnam/issues"
+  },
+  "homepage": "https://github.com/maxkorp/behnam#readme"
+}
