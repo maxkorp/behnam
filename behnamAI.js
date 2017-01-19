@@ -1,4 +1,6 @@
 // behnamAI.js
+const actions = require('./actions.js');
+
 while (playerOnField) {
   if (barg.alive()) {
     harass(barg);
